@@ -19,3 +19,13 @@ Idem à partir de la machine physique vers le 127.0.0.1
 
 ![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%203.png)
 
+###### c. affichez votre table de routage sur la VM et expliquez chacune des lignes
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%204.png)
+
+<ol>
+  <li>La ligne 1 correspond à la Gateway</li>
+  <li>La ligne 2 correspond à l'adresse IP de la première carte Réseau NAT (10.0.2.0)</li>
+  <li>La ligne 3 correspond à le'adresse IP de notre seconde carte Réseau (192.168.101.0)</li>
+</ol>
+
