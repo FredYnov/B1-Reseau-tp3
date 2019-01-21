@@ -29,3 +29,17 @@ Idem à partir de la machine physique vers le 127.0.0.1
   <li>La ligne 3 correspond à le'adresse IP de notre seconde carte Réseau (192.168.101.0)</li>
 </ol>
 
+**5. Faire joujou avec quelques commandes**
+
+Ping Hôte -> VM
+
+Vers IP 192.168.101.10
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%205.png)
+
+Ping VM -> Hôte
+
+Vers IP 192.168.101.1
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%206.png)
+
