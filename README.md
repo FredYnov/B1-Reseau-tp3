@@ -45,7 +45,7 @@ Là encore, j'ai fait un traceroute à partir de CentOs vers l'adresse IP de ma 
 
 * Affichage de la table de routage de l'hôte:
 
-
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%2010.png)
 
 * Affichage de la table de routage de la VM:
 
@@ -73,9 +73,20 @@ Idem ci-dessus pour dig
 
 **2. SSH**
 
+  *A. SSH
+
 J'ai effectué le changement de port en passant du port 22 au port 2222.
 
 Ensuite, j'ai refait une commande ss -t -l -4 -n
 
 ![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%209.png)
+
+  *B. Netcat
+
+
+***III. Routage Statique***
+
+**1. Préparation des hôtes (vos PCs)**
+
+  *Vos carte Ethernet doivent être dans le réseau 12 : 192.168.112.0/30
 
