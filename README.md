@@ -73,3 +73,9 @@ Idem ci-dessus pour dig
 
 **2. SSH**
 
+J'ai effectué le changement de port en passant du port 22 au port 2222.
+
+Ensuite, j'ai refait une commande ss -t -l -4 -n
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%209.png)
+
