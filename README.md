@@ -15,7 +15,7 @@ Là encore, j'ai fait un traceroute à partir de CentOs vers l'adresse IP de ma 
 
 ![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%202.png)
 
-Idem à partir de la machine physique vers le 127.0.0.1
+* Idem à partir de la machine physique vers le 127.0.0.1
 
 ![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%203.png)
 
@@ -31,15 +31,39 @@ Idem à partir de la machine physique vers le 127.0.0.1
 
 **5. Faire joujou avec quelques commandes**
 
-Ping Hôte -> VM
+* Ping Hôte -> VM
 
-Vers IP 192.168.101.10
+  * Vers IP 192.168.101.10
 
 ![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%205.png)
 
-Ping VM -> Hôte
+* Ping VM -> Hôte
 
-Vers IP 192.168.101.1
+  * Vers IP 192.168.101.1
 
 ![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%206.png)
+
+* Affichage de la table de routage de l'hôte:
+
+
+
+* Affichage de la table de routage de la VM:
+
+cf ci-dessus, l'opération a déjà été faite dans 4c.
+
+* Depuis la VM utilisez curl (ou wget) pour télécharger un fichier sur internet
+
+Que ce soit avec sudo yum install wget ou sudo yum install binds-utils, impossible d'installer quoi que ce soit. Erreur : aucune source disponible...
+
+* depuis la VM utilisez dig pour connaître l'IP de :
+
+Idem ci-dessus pour dig
+
+*II. Notion de ports et SSH*
+
+**1. Exploration des ports locaux**
+
+* Pour cette partie, j'ai fait un SS -altnp4
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%207.png)
 
