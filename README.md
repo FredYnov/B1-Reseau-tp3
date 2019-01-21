@@ -59,11 +59,17 @@ Que ce soit avec sudo yum install wget ou sudo yum install binds-utils, impossib
 
 Idem ci-dessus pour dig
 
-*II. Notion de ports et SSH*
+***II. Notion de ports et SSH***
 
 **1. Exploration des ports locaux**
 
-* Pour cette partie, j'ai fait un SS -altnp4
+* Pour cette partie, j'ai fait un SS -altnp4, voilà le résultat
 
 ![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%207.png)
+
+* IPv4 en écoute:
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%208.png)
+
+**2. SSH**
 
