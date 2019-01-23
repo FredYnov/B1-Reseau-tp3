@@ -140,16 +140,16 @@ Sur Mac, la commande est sudo **sysctl -w net.inet.ip.forwarding=1** et la comma
 
 BILAN
 
-|Appareil  |   IP(s)       |
-|----------| ------------- |
-|PC1-------| 192.168.112.22|
-|VM1-------| 192.168.101.10|
-|PC2-------| 192.168.112.23|
-|VM2-------| 192.168.102.10|
+|Appareil      |   IP(s)       |
+|------------- | ------------- |
+|PC1---------> | 192.168.112.22|
+|VM1---------> | 192.168.101.10|
+|PC2---------> | 192.168.112.23|
+|VM2---------> | 192.168.102.10|
 
 PC1 accède déjà aux réseaux 1 et 12, il faut juste lui dire comment accéder au réseau 2. Nous avons tapé la commande suivante:
 
-**route -n add -net 192.168.102.0/24 192.168.112.2
+**route -n add -net 192.168.102.0/24 192.168.112.2**
 
 ![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%2018.png)
 
