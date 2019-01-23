@@ -84,9 +84,80 @@ Ensuite, j'ai refait une commande ss -t -l -4 -n
   *B. Netcat
 
 
-***III. Routage Statique***
+# III. Routage Statique
 
-**1. Préparation des hôtes (vos PCs)**
+### 1. Préparation des hôtes (vos PCs)
 
   *Vos carte Ethernet doivent être dans le réseau 12 : 192.168.112.0/30
+
+**Desactivation de SElinux
+
+Pour désactiver SElinux, nous avons fait un **sudo setenforce 0** puis nous avons modifié le fichier **/etc/selinux/config**.
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/permissive.png)
+
+Modification du mode
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%2012.png)
+
+**Check**
+-----------------
+
+**Préparation avec le câble RJ45**
+
+Je suis PC1 et j'ai Ping l'IP du PC2. Nous avons pu nous pinger entre les 2 Mac sur le réseau 12 en passant par le câ
+ble RJ45.
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%2013.png)
+
+**Préparation avec VirtualBox**
+
+Nous avons été sur VirtualBox dans **'File'**, **'Host Network Manager'** puis nous avons configuré nos IP en réseau **'Host Only'**. J'ai pris l'IP 192.168.101.1 sur le réseau 192.168.101.0/24.
+
+Modification de l'adresse IP sur la VM avec la commande **Nano**.
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%2014.png)
+
+**Check**
+
+J'ai réussi à Ping mon Mac (PC1) avec la VM (VM1)
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%2015.png)
+
+Observation des tables de routage sur tous les hôtes:
+
+Sur Mac, on utilise la commande **'Netstat -nr'**
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%2016.png)
+
+## Activation du Routage
+
+Sur Mac, la commande est sudo **sysctl -w net.inet.ip.forwarding=1** et la commande est temporaire. A chaque redémarrage de la VM, il faut relancer la commande.
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%2017.png)
+
+## Configuration du Routage
+
+BILAN
+
+|Appareil  |   IP(s)       |
+|----------| ------------- |
+|PC1-------| 192.168.112.22|
+|VM1-------| 192.168.101.10|
+|PC2-------| 192.168.112.23|
+|VM2-------| 192.168.102.10|
+
+PC1 accède déjà aux réseaux 1 et 12, il faut juste lui dire comment accéder au réseau 2. Nous avons tapé la commande suivante:
+
+**route -n add -net 192.168.102.0/24 192.168.112.2
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%2018.png)
+
+La route est créée et PC1 peut ping 192.168.102.1
+
+![alt text](https://github.com/FredYnov/B1-Reseau-tp3/blob/master/Capture%20ecran/Capture%2019.png)
+
+PING VM1 à VM2
+
+Nous ne sommes pas parvenus à Pinger nos deux VM, une erreur d'IP récalcitrante (on a pas réussi à redéfinir l'IP sur CentOs, à chaque fois nous avions une erreur). Avec plus de temps, nous aurions réussi, désolé.
 
